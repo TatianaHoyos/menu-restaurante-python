@@ -24,3 +24,18 @@ menu = [
 # Parámetros globales
 categoria_objetivo = "Postres"
 umbral_precio = 15000
+
+# Función para calcular el precio final
+def calcular_precio_final(categoria, precio_base):
+
+    # Validar condiciones para aplicar descuento
+    if categoria == categoria_objetivo and precio_base > umbral_precio:
+        
+        descuento = precio_base * 0.15
+        precio_final = precio_base - descuento
+
+    else:
+        precio_final = precio_base
+
+    return precio_final
+
