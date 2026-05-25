@@ -39,3 +39,25 @@ def calcular_precio_final(categoria, precio_base):
 
     return precio_final
 
+
+# Mostrar resultados
+print("========================================")
+print("   MENÚ DEL RESTAURANTE - PROMOCIONES")
+print("========================================\n")
+
+# Recorrer matriz
+for producto in menu:
+
+    nombre = producto[0]
+    categoria = producto[1]
+    precio_base = producto[2]
+
+    # Llamar función
+    precio_final = calcular_precio_final(categoria, precio_base)
+
+    # Mostrar información
+    print(f"Producto: {nombre}")
+    print(f"Categoría: {categoria}")
+    print(f"Precio Base: ${precio_base:,.0f}")
+    print(f"Precio Final: ${precio_final:,.0f}")
+    print("----------------------------------------")
